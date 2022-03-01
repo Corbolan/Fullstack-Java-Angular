@@ -1,0 +1,5 @@
+package com.germano.os.services.exceptions;
+
+public class ObjectNotFoundException extends RuntimeException{
+
+}

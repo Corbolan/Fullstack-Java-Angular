@@ -1,0 +1,14 @@
+package com.germano.os.resource.exceptions;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+import com.germano.os.services.exceptions.ObjectNotFoundException;
+
+@ControllerAdvice
+public class ResourceExceptionHandler {
+	@ExceptionHandler(ObjectNotFoundException.class)
+	public ResponseEntity<StandardError> objectNotFoundException(ObjectNotFoundException e){
+		StandardError error = new StandardError(System.currentTimeMillis(), null, null)
+	}
+}
