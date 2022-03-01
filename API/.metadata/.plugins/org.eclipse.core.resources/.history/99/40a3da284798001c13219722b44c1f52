@@ -1,0 +1,11 @@
+package com.germano.os.domain;
+
+public class OS {
+	private Integer id;
+	private LocalDateTime dataAbertura;
+	private LocalDateTime dataFechamento;
+	private Prioridade prioridade;
+	private String observacoes;
+	private Status status;
+	private Tecnico tecnico;
+}

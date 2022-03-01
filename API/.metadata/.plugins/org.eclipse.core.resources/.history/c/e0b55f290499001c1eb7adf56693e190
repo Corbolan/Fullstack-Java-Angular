@@ -1,0 +1,27 @@
+package com.germano.os.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+import com.germano.os.repositories.ClienteRepository;
+import com.germano.os.repositories.OsRepository;
+import com.germano.os.repositories.TecnicoRepository;
+
+@Configuration
+@Profile("test")
+public class TestConfig {
+	public void instanciaDB() {
+		@Autowired
+		private TecnicoRepository tecnicoRepository;
+		@Autowired
+		private ClienteRepository clienteRepository;
+		@Autowired
+		private OsRepository osrepRepository;
+		
+public void instanciaDB() {
+			
+		}
+	}
+
+}

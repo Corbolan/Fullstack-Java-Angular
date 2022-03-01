@@ -1,0 +1,5 @@
+package com.germano.os.domain.enuns;
+
+public enum Prioridade {
+
+}

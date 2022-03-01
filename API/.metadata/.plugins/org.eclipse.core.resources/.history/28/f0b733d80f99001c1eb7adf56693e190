@@ -1,0 +1,13 @@
+package com.germano.os.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.germano.os.domain.OS;
+import com.germano.os.domain.enuns.Prioridade;
+import com.germano.os.domain.enuns.Status;
+
+@Repository
+public interface OsRepository extends JpaRepository<OS, Integer>{
+	OS os1 = new OS(null, Prioridade.ALTA, "Teste create OD", Status.ANDAMENTO, t1, c1);
+}

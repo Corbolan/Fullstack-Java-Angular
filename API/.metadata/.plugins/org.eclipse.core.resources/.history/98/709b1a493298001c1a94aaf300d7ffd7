@@ -1,0 +1,6 @@
+package com.germano.os.domain;
+
+public class Tecnico extends Pessoa{
+	
+
+}

@@ -1,0 +1,7 @@
+package com.germano.os.domain;
+
+public class Cliente extends Pessoa{
+	
+	
+
+}
