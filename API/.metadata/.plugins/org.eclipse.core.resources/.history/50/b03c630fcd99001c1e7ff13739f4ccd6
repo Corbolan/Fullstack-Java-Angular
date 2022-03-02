@@ -1,5 +1,0 @@
-package com.germano.os.resource.exceptions;
-
-public class ValidationError extends StandardError {
-	private static final long serialVersionUID = 1L;
-}

@@ -1,5 +1,0 @@
-package com.germano.os.domain;
-
-public abstract class Pessoa {
-
-}

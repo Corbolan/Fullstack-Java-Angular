@@ -1,5 +1,0 @@
-package com.germano.os.repositories;
-
-public interface TecnicoRepository {
-
-}

@@ -1,6 +1,0 @@
-package com.germano.os.services;
-
-@Service
-public class TecnicoService {
-
-}

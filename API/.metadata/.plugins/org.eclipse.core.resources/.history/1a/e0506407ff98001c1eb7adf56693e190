@@ -1,7 +1,0 @@
-package com.germano.os.repositories;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface TecnicoRepository extends JpaRepository<T, ID>{
-
-}
