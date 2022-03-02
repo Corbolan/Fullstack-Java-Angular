@@ -8,8 +8,10 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.germano.os.domain.Pessoa;
 import com.germano.os.domain.Tecnico;
 import com.germano.os.dtos.TecnicoDTO;
+import com.germano.os.repositories.PessoaRepository;
 import com.germano.os.repositories.TecnicoRepository;
 import com.germano.os.resource.exceptions.DataIntegratyViolationException;
 import com.germano.os.services.exceptions.ObjectNotFoundException;
@@ -19,6 +21,9 @@ public class TecnicoService {
 
 	@Autowired
 	private TecnicoRepository repository;
+	
+	@Autowired
+	private PessoaRepository pessoaRepository;
 
 	public Tecnico findById(Integer id) {
 		Optional<Tecnico> obj = repository.findById(id);
@@ -29,6 +34,9 @@ public class TecnicoService {
 	public List<Tecnico> findAll() {
 		return repository.findAll();
 	}
+	/*
+	 * Trata CPF já cadastrado
+	 */
 
 	public Tecnico create(TecnicoDTO objDTO) {
 		if (findByCPF(objDTO) != null) {
@@ -37,7 +45,9 @@ public class TecnicoService {
 		return repository.save(new Tecnico(null, objDTO.getNome(), objDTO.getCpf(), objDTO.getTelefone()));
 
 	}
-
+	/*
+	 * Atualiza Tecnico
+	 */
 	public Tecnico update(Integer id, @Valid TecnicoDTO objDTO) {
 		Tecnico oldObj = findById(id);
 		if (findByCPF(objDTO) != null && findByCPF(objDTO).getId() != id) {
@@ -48,7 +58,9 @@ public class TecnicoService {
 		oldObj.setTelefone(objDTO.getTelefone());
 		return repository.save(oldObj);
 	}
-
+	/*
+	 * Deleta Tecnico pelo id
+	 */
 	public void delete(Integer id) {
 		Tecnico obj = findById(id);
 		if(obj.getList().size() > 0) { // Se a lista for maior que 0
@@ -57,8 +69,8 @@ public class TecnicoService {
 		repository.deleteById(id);
 	}
 
-	private Tecnico findByCPF(TecnicoDTO objDTO) {
-		Tecnico obj = repository.findByCPF(objDTO.getCpf());
+	private Pessoa findByCPF(TecnicoDTO objDTO) {
+		Pessoa obj = pessoaRepository.findByCPF(objDTO.getCpf());
 		if (obj != null) {
 			return obj;
 		}
