@@ -8,7 +8,6 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.germano.os.domain.Cliente;
 import com.germano.os.domain.OS;
 import com.germano.os.domain.Tecnico;
 import com.germano.os.domain.enuns.Prioridade;
@@ -37,7 +36,6 @@ public class OsService {
 		return repository.findAll();
 	}
 	public OS create(@Valid OSDTO obj) {
-		return fromDTO(obj);
 		
 	}
 	private OS fromDTO(OSDTO obj) {

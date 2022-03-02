@@ -39,7 +39,7 @@ public class OsResource {
 	@PostMapping
 	public ResponseEntity<OSDTO> create(@Valid @RequestBody OSDTO obj){
 		obj = new OSDTO(service.create(obj));
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId().toUri();
 		return ResponseEntity.created(uri).build();
 		
 	}

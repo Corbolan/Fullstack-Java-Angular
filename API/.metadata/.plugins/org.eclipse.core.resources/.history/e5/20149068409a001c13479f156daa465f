@@ -20,7 +20,9 @@ public class OSDTO implements Serializable {
 	@NotEmpty(message = "O campo OBSERVAÇÕES é requerido")
 	private String observacoes;
 	private Integer status;
+	@NotEmpty(message = "O campo Técnico é requerido")
 	private Integer tecnico;
+	@NotEmpty(message = "O campo Cliente é requerido")
 	private Integer cliente;
 
 	public OSDTO() {
