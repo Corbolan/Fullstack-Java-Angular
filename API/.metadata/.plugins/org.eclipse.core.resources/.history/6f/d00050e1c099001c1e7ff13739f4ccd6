@@ -1,0 +1,6 @@
+package com.germano.os.resource.exceptions;
+
+public class DataIntegratyViolationException extends RuntimeException {
+	private static final long serialVersionUID =1L;
+
+}
