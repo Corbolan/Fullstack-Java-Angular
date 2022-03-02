@@ -1,0 +1,5 @@
+package com.germano.os.dtos;
+
+public class OSDTO implements Serializable{
+	private static final long serialVersionUID = 1L;
+}

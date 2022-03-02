@@ -1,0 +1,37 @@
+package com.germano.os.dtos;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+import com.germano.os.domain.Cliente;
+import com.germano.os.domain.Tecnico;
+
+public class OSDTO implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
+	private Integer id;
+	private LocalDateTime dataAbertura;
+	private LocalDateTime dataFechamento;
+	private Integer prioridade;
+	private String observacoes;
+	private Integer status;
+	private Integer tecnico;
+	private Integer cliente;
+	public OSDTO() {
+		super();
+	}
+	public OSDTO(Integer id, LocalDateTime dataAbertura, LocalDateTime dataFechamento, Integer prioridade,
+			String observacoes, Integer status, Integer tecnico, Integer cliente) {
+		super();
+		this.id = id;
+		this.dataAbertura = dataAbertura;
+		this.dataFechamento = dataFechamento;
+		this.prioridade = prioridade;
+		this.observacoes = observacoes;
+		this.status = status;
+		this.tecnico = tecnico;
+		this.cliente = cliente;
+	}
+	
+	
+}
