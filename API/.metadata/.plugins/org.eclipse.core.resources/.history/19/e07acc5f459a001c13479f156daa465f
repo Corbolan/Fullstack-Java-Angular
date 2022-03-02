@@ -1,6 +1,5 @@
 package com.germano.os.services;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -58,10 +57,6 @@ public class OsService {
 		
 		newObj.setTecnico(tec);
 		newObj.setCliente(cli);
-		
-		if(newObj.getStatus().getCod().equals(2)) {
-			newObj.setDataFechamento(LocalDateTime.now());
-		}
 		
 		return repository.save(newObj);
 	}
